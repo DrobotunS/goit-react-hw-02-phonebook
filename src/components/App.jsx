@@ -1,6 +1,5 @@
 import { Component } from 'react';
 import { nanoid } from 'nanoid';
-import { Report } from 'notiflix/build/notiflix-report-aio';
 import ContactForm from './ContactForm/ContactForm';
 import Filter from './Filter/Filter';
 import ContactList from './ContactList/ContactList';
@@ -17,10 +16,8 @@ class App extends Component {
     const newContact = { id: nanoid(), name, number };
 
     contacts.some(contact => contact.name === name)
-      ? Report.warning(
-          `${name}`,
-          'This user is already in the contact list.',
-          'OK'
+      ? alert(
+          `${name} is already in contacts.`,
         )
       : this.setState(({ contacts }) => ({
           contacts: [newContact, ...contacts],
