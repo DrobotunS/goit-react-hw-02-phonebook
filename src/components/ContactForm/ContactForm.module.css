@@ -1,0 +1,34 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  border: solid 1px;
+  padding: 10px;
+  margin-bottom: 25px;
+}
+.button {
+  background: inherit;
+  width: 90px;
+  padding: 3px 5px;
+  display: inline-block;
+  cursor: pointer;
+  border: solid 1px;
+  border-radius: 5px;
+  box-shadow: 0 1px #999;
+  transition: background 0.25s, color 0.25s;
+}
+.button:active {
+  color: #ffffff;
+  background: blue;
+  transform: translateY(1px);
+}
+
+.label {
+  font-weight: 600;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.input {
+  margin-top: 5px;
+}

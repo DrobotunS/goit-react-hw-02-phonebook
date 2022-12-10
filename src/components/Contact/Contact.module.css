@@ -1,0 +1,31 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+}
+.name {
+  font-weight: 500;
+}
+.number {
+  margin-right: 5px;
+  margin-left: 5px;
+  font-weight: 500;
+}
+.icon {
+  padding-top: 8px;
+}
+.button {
+  background: inherit;
+  padding: 1px 5px;
+  display: inline-block;
+  cursor: pointer;
+  border: solid 1px;
+  border-radius: 5px;
+  box-shadow: 0 1px #999;
+  transition: background 0.25s, color 0.25s;
+}
+
+.button:active {
+  color: #ffffff;
+  background: blue;
+  transform: translateY(1px);
+}

@@ -1,0 +1,11 @@
+.list {
+  list-style-type: square;
+}
+.item {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.item:last-child {
+  margin-bottom: 0;
+}
