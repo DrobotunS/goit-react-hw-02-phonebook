@@ -14,14 +14,13 @@ class App extends Component {
   addContact = ({ name, number }) => {
     const { contacts } = this.state;
     const newContact = { id: nanoid(), name, number };
-
-    contacts.some(contact => contact.name === name)
-      ? alert(
-          `${name} is already in contacts.`,
-        )
-      : this.setState(({ contacts }) => ({
-          contacts: [newContact, ...contacts],
-        }));
+ 
+    if (contacts.some(contact => contact.name === name)) {
+      alert(`${name} is already in contacts.`,)
+    } else { this.setState(({ contacts }) => ({
+      contacts: [newContact, ...contacts],
+    }));}
+      
   };
 
   deleteContact = contactId => {
